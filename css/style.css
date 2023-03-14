@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.7%;
+    height: 100%;
+   
+}
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 15vh 75vh 10vh;
+    overflow: hidden;
+}
+
+/* cabecera */
+header{ 
+    height: 15vh;
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 4fr 1fr;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(165, 213, 233) 0.01%, rgba(113, 184, 208, 1) 0.02%, white 100%);
+}
+
+/* logo */
+figure{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+figure img{
+    background-size: contain;
+    width: auto;
+    margin: 0 1%;
+    height: 15vh;
+}
+
+/* titulo */
+h1{
+    margin: auto 0;
+    justify-content: center;
+    
+    font-style: italic;
+    text-align: center;
+}
+h1 a{
+    text-decoration: none;
+}
+.miBlog{
+    font-size: 4rem;
+    color: #0A1128;
+    text-shadow: .1rem .1rem .1rem #A40303;
+}
+.nombre{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #034078;
+    text-shadow: .1rem .1rem .1rem #FF5F5F;
+}
+
+/* menu de navegacion */
+nav{transition: all 1s ease-in-out;
+    right: 100%;
+    border-top: solid black;
+    /* display: none; */
+    position: absolute;
+    top:100%;
+    background-color: #A9D6E5;
+    width: 100vw;
+    height: 85vh;
+    text-align: center;
+}
+/* nav ul */
+nav ul{
+    height: 90%;
+    width: 90%;
+    margin: 5% auto;
+    
+}
+/* nav ul li */
+nav ul li{
+    height: 25%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* nav ul li a */
+nav ul li a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* animaciones */
+nav ul li a:hover{
+    color: white;
+}
+.estasAqui{
+    color: rgba(96, 108, 115, 1);
+}
+
+/* boton */
+button{
+    border:none;
+    background-color: transparent;
+}/* span del boton */
+#boton{
+    font-size: 4.5rem;
+}
+
+/* MOSTRAR MENU */
+.mostrarMenu{
+    transition: all .10s ease-in-out;
+    right: 0%;
+    /* display: block; */
+}
+
+/* contenido principal */
+main{
+    border-top: 1rem solid white;
+    height: 75vh;
+    background-color: #1282A2;
+    animation: cambiarColor 5s infinite;
+}
+@keyframes cambiarColor {
+    15%{
+        background-color: #034078;
+    }
+    30%{
+        background-color: rebeccapurple;
+    }
+    60%{
+        background-color: #1282A2;
+    }
+    90%{
+        background-color: #0A1128;
+    }
+}
+
+/* parrafo */
+main p{
+    color: white;
+    margin:calc(75vh - 65vh) 5% 9%;
+    text-align: center;
+    font-size: 3rem;
+
+    background: conic-gradient(from 133.22deg at 15.3% 14.8%, #EDF2FB -2.2deg, rgba(237, 242, 251, 0) 244.98deg, #EDF2FB 357.8deg, rgba(237, 242, 251, 0) 604.98deg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: rgb(251, 255, 29);
+}
+
+/* boton de explorar */
+main a{color: white;
+    border: .3rem solid black;
+    background-color: #A9D6E5;
+    padding: 5%;
+    font-size: 2.5rem;
+    text-align: center;
+    display: block;
+    margin: auto 20%;
+    border-radius: 2rem;
+    text-decoration: none;
+    animation: cambiarColor_enlace 600ms infinite;
+}
+@keyframes cambiarColor_enlace {
+    15%{color: yellow;
+        background-color: #0A1128;
+    }
+    30%{
+        color: black;
+        background-color: #1282A2;
+    }
+    60%{color: brown;
+        background-color: rebeccapurple;
+    }
+    90%{color: aliceblue;
+        background-color: #034078;
+    }
+}
+
+
+/* pie de pagina */
+footer{
+    border-top: solid white;
+    height: 10vh;
+    background-color: #71B8D0;
+}
+
+figure a img{
+    margin: auto 10%;
+    background-size: contain;
+    height: 9vh;
+}
