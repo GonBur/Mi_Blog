@@ -142,10 +142,23 @@ main{
     }
 }
 
+/* boton de musica */
+main div{
+    text-align: end;
+    animation: cambiarColor_enlace 60s infinite;
+}
+main div button{
+    margin: 0 5%;
+}
+main div span {
+    color: white;
+    animation: cambiarColor_enlace 900ms infinite;
+}
+
 /* parrafo */
 main p{
     color: white;
-    margin:calc(75vh - 65vh) 5% 9%;
+    margin:calc(75vh - 70vh) 5% 9%;
     text-align: center;
     font-size: 3rem;
 
