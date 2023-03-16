@@ -105,7 +105,7 @@ nav ul li a:hover{
 }
 
 /* boton */
-button{
+header button{
     border:none;
     background-color: transparent;
 }/* span del boton */
@@ -144,19 +144,24 @@ main{
 
 /* boton de musica */
 main div{
+    
     text-align: end;
     /* animation: cambiarColor_enlace 60s infinite; */
 }
 main div button{
     color:white;
+    border:none;
+    background-color: transparent;
     margin: 0 5%;cursor: pointer;
+}#botonMusica{
+    font-size: 4rem;
 }
 
 
 /* parrafo */
 main p{
     color: white;
-    margin:calc(75vh - 70vh) 5% 9%;
+    margin:calc(75vh - 73vh) 5% 9%;
     text-align: center;
     font-size: 3rem;
 
@@ -207,4 +212,141 @@ figure a img{
     margin: auto 10%;
     background-size: contain;
     height: 9vh;
+}
+
+/* modo tablet */
+@media (min-width:767px) and (max-width:1023px){
+    /* cabecera */
+/* titulo */
+.miBlog{
+    font-size: 8rem;
+}
+.nombre{
+    font-size: 3.5rem;
+}
+
+/* nav ul li a */
+nav ul li a{
+    font-size:4rem;
+}
+
+
+
+/* boton del navegador */
+#boton{
+    font-size: 90px;
+}
+
+
+
+
+/* parrafo */
+main p{
+    color: white;
+    margin:calc(75vh - 65vh) calc(75vh - 70vh);
+    font-size: 5rem;
+}
+
+/* boton de explorar */
+main a{
+    border: .5rem solid black;
+    font-size: 4rem;
+    margin: auto calc(50% - 25%);
+    border-radius: 3rem;
+}
+}
+
+
+/* modo pc */
+/* modo tablet */
+@media (min-width:1023px){
+    body{
+        grid-template-rows: 15vh 80vh 5vh;
+    }
+    
+    /* cabecera */
+    header{ background-color: #fafafa;
+        height: 15vh;
+        grid-template-columns: 1fr 2fr 5fr;
+    }
+    
+    header h1{
+        height: 15vh;
+        margin: 0;
+        padding: 0%;}
+    /* titulo */
+    .miBlog{
+        font-size: 8.5rem;
+    }
+    .nombre{
+        font-size: 4rem;
+    }
+    
+    /* menu de navegacion */
+    nav{ 
+         border: none;  
+         right: 0%;
+        position: relative;
+        top:0%;
+        background-color: transparent;
+        width: 100%;
+        height: 15vh;
+        text-align: center;
+    }
+    /* nav ul */
+    nav ul{
+        margin: 0;
+        width: 100%;
+    }
+    /* nav ul li */
+    nav ul li{
+        margin: 3%;
+        display: inline-block;
+    }
+    /* nav ul li a */
+    nav ul li a{
+        font-size: 4rem;
+    }
+    
+
+    
+    /* boton */
+    header button{
+        display: none;
+    }/* span del boton */
+    
+
+
+
+
+/* contenido principal */
+main{
+    height: 80vh;
+}
+
+
+/* parrafo */
+main p{
+    color: white;
+    margin:calc(75vh - 63vh) calc(75vh - 40vh);
+    font-size: 7rem;
+}
+
+/* boton de explorar */
+main a{
+    border: .5rem solid black;
+    font-size: 4rem;
+    margin: auto 40%;
+    border-radius: 3rem;
+    padding: 2% 0;
+}
+
+/* pie de pagina */
+footer{
+    height: 5vh;
+}
+footer a img{
+    height: 5vh
+};
+
 }
