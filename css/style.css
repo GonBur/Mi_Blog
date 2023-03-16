@@ -145,15 +145,13 @@ main{
 /* boton de musica */
 main div{
     text-align: end;
-    animation: cambiarColor_enlace 60s infinite;
+    /* animation: cambiarColor_enlace 60s infinite; */
 }
 main div button{
-    margin: 0 5%;
+    color:white;
+    margin: 0 5%;cursor: pointer;
 }
-main div span {
-    color: white;
-    animation: cambiarColor_enlace 900ms infinite;
-}
+
 
 /* parrafo */
 main p{
