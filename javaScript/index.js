@@ -12,9 +12,11 @@ boton.addEventListener("click", mostrarMenu)
 
 /* repoducir audio */
 let botonMusica = document.getElementById("botonMusica")
+let audio = document.getElementById("audioPrincipal");
+audio.play();
 
 function playAudio(){
-    let audio = document.getElementById("audioPrincipal");
+    
     if (audio.paused) {
         audio.play();
         botonMusica.innerHTML = "<span class='material-symbols-outlined'>volume_up</span>";
