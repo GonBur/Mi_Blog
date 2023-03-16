@@ -12,24 +12,26 @@ boton.addEventListener("click", mostrarMenu)
 
 
 /* repoducir audio */
-/* let botonMusica = document.getElementById("botonMusica")
+let botonMusica = document.getElementById("botonMusica")
 
 function playAudio(){
     document.getElementById("audioPrincipal").play();
 }
 
-botonMusica.addEventListener("click", playAudio) */
+botonMusica.addEventListener("click", playAudio)
 
 
 /* pausar audio */
-/* let botonPause = document.getElementById("botonPause")
+let botonPause = document.getElementById("botonPause")
 
 function pause(){
     document.getElementById("audioPrincipal").pause();
 }
-botonPause.addEventListener("click", pause) */
+botonPause.addEventListener("click", pause)
 
-let audio = document.getElementsByTagName("audio")[0];
+
+
+/* let audio = document.getElementsByTagName("audio")[0];
 let botonMusica = document.getElementById("botonMusica");
 
 function repoducirMusica() {
@@ -42,4 +44,4 @@ function repoducirMusica() {
   }
 }
 
-botonMusica.addEventListener("click", repoducirMusica)
+botonMusica.addEventListener("click", repoducirMusica) */
