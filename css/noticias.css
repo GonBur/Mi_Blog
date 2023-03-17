@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.7%;
+    height: 100%;
+   
+}
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 15vh 75vh 10vh;
+    overflow: hidden;
+}
+
+/* cabecera */
+header{ 
+    height: 15vh;
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 4fr 1fr;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(165, 213, 233) 0.01%, rgba(113, 184, 208, 1) 0.02%, white 100%);
+}
+
+/* logo */
+figure{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+figure img{
+    background-size: contain;
+    width: auto;
+    margin: 0 1%;
+    height: 15vh;
+}
+
+/* titulo */
+h1{
+    margin: auto 0;
+    justify-content: center;
+    
+    font-style: italic;
+    text-align: center;
+}
+h1 >a{
+    text-decoration: none;
+}
+.miBlog{
+    font-size: 4rem;
+    color: #0A1128;
+    text-shadow: .1rem .1rem .1rem #A40303;
+}
+.nombre{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #034078;
+    text-shadow: .1rem .1rem .1rem #FF5F5F;
+}
+
+/* menu de navegacion */
+nav{transition: all 1s ease-in-out;
+    right: 100%;
+    border-top: solid black;
+    /* display: none; */
+    position: absolute;
+    top:100%;
+    background-color: #A9D6E5;
+    width: 100vw;
+    height: 85vh;
+    text-align: center;
+}
+/* nav ul */
+nav ul{
+    height: 90%;
+    width: 90%;
+    margin: 5% auto;
+    
+}
+/* nav ul li */
+nav ul li{
+    height: 25%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* nav ul li a */
+nav >ul >li >a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+/* animaciones */
+nav ul li a:hover{
+    color: white;
+}
+.estasAqui{
+    color: rgba(96, 108, 115, 1);
+}
+
+/* boton */
+header button{
+    border:none;
+    background-color: transparent;
+}/* span del boton */
+#boton{
+    font-size: 4.5rem;
+}
+
+/* MOSTRAR MENU */
+.mostrarMenu{
+    transition: all .10s ease-in-out;
+    right: 0%;
+    /* display: block; */
+}
+
+/* contenido principal */
+main{
+    border-top: 1rem solid white;
+    height: 75vh;
+    background-color: #1282A2;
+    animation: cambiarColor 5s infinite;
+}
+@keyframes cambiarColor {
+    15%{
+        background-color: #034078;
+    }
+    30%{
+        background-color: rebeccapurple;
+    }
+    60%{
+        background-color: #1282A2;
+    }
+    90%{
+        background-color: #0A1128;
+    }
+}
+
+/* boton de musica */
+main .audio{ 
+    padding : 2%;
+    height: 10vh;
+    text-align: end;
+    /* animation: cambiarColor_enlace 60s infinite; */
+}
+main .audio button{
+    color:white;
+    border:none;
+    background-color: transparent;
+    margin: 0 5%;cursor: pointer;
+}#botonMusica{
+    font-size: 4rem;
+}
+
+/* contenido */
+main >.contenido{
+    width: 100%;
+    height:calc(75vh - 10vh);
+    overflow-y: scroll;
+}
+
+main >div >section{
+    border: solid black;
+    width: 95%;
+    height: calc(65vh - 8vh);
+    background-color: rgb(255, 255, 255);
+    margin: calc(57vh - 53vh) auto;
+    position: relative;
+    display: grid;
+    grid-template-rows: 30% 40%;
+    text-align: center;
+    font-weight: bold;
+}
+main >div >section >h2{
+    text-shadow: .1rem .1rem .1rem #1282A2;
+    color: #034078;
+    padding: 2%;
+    font-size: 2.5rem;
+    z-index: 1;
+    border-bottom: solid rgb(245, 3, 3);
+    animation: cambiar_colorH2 2s infinite;
+}
+main >div >section >p{
+    margin: auto;
+    font-size: 1.8rem;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    background-color: #f5f5f55d;
+    text-shadow: .1rem .2rem .1rem black;
+    animation: cambiar_color 2s infinite;
+}
+@keyframes cambiar_colorH2{
+    30%{
+        background-color: #f5f5f593;
+        color:rgb(0, 0, 0);
+        text-shadow: .1rem .2rem .1rem rgb(10, 169, 218);
+    }
+}
+@keyframes imagen {
+    
+}
+@keyframes cambiar_color {
+    55%{
+        background-color: #034078;
+        color: rgb(255, 255, 255);
+        text-shadow: .1rem .2rem .1rem rgb(10, 169, 218);
+        }
+}
+
+main >div >section >figure{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    background-image: url("../img/section1_imagen1.jpg");
+    background-position: center;
+    opacity: .8;
+    z-index: 0;
+    height: 57vh;
+    position: absolute;
+}
+main >div >section >a{
+    z-index: 1;
+    padding: 1%;
+    border-radius: 1rem;
+    margin: auto 30%;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 1.9rem;
+    background-color: red;
+    text-shadow: .1rem .1rem .1rem #1282A2;
+}
+
+
+/* pie de pagina */
+footer{
+    border-top: solid white;
+    height: 10vh;
+    background-color: #71B8D0;
+}
+
+figure >a >img{
+    margin: auto 10%;
+    background-size: contain;
+    height: 9vh;
+}
+
+/* modo tablet */
+@media (min-width:767px) and (max-width:1023px){
+    /* cabecera */
+/* titulo */
+.miBlog{
+    font-size: 8rem;
+}
+.nombre{
+    font-size: 3.5rem;
+}
+
+/* nav ul li a */
+nav >ul >li >a{
+    font-size:4rem;
+}
+
+
+
+/* boton del navegador */
+#boton{
+    font-size: 90px;
+}
+
+/* boton de musica */
+main .audio{
+    height: 5vh;
+    /* animation: cambiarColor_enlace 60s infinite; */
+}
+
+
+/* contenido */
+main .contenido{
+    height:calc(75vh - 5vh);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 35vh 35vh;
+}
+
+main > div >section{
+    width: 95%;
+    height: calc(65vh - 34vh);
+    margin: calc(57vh - 55vh) auto;
+}
+
+}
+
+
+/* modo pc */
+/* modo tablet */
+@media (min-width:1023px){
+    body{
+        grid-template-rows: 15vh 80vh 5vh;
+    }
+    
+    /* cabecera */
+    header{ background-color: #fafafa;
+        height: 15vh;
+        grid-template-columns: 1fr 2fr 5fr;
+    }
+    
+    header >h1{
+        height: 15vh;
+        margin: 0;
+        padding: 0%;}
+    /* titulo */
+    .miBlog{
+        font-size: 8.5rem;
+    }
+    .nombre{
+        font-size: 4rem;
+    }
+    
+    /* menu de navegacion */
+    nav{ 
+         border: none;  
+         right: 0%;
+        position: relative;
+        top:0%;
+        background-color: transparent;
+        width: 100%;
+        height: 15vh;
+        text-align: center;
+    }
+    /* nav ul */
+    nav >ul{
+        margin: 0;
+        width: 100%;
+    }
+    /* nav ul li */
+    nav >ul >li{
+        margin: 3%;
+        display: inline-block;
+    }
+    /* nav ul li a */
+    nav >ul >li >a{
+        font-size: 4rem;
+    }
+    
+
+    
+    /* boton */
+    header >button{
+        display: none;
+    }/* span del boton */
+    
+
+
+
+
+/* contenido principal */
+main{
+    height: 80vh;
+}
+
+/* boton de musica */
+main .audio{
+    padding: 0%;
+    margin-bottom: 1%;
+    height: 5vh;
+    /* animation: cambiarColor_enlace 60s infinite; */
+}
+
+
+/* contenido */
+main .contenido{overflow: hidden;
+    height:calc(80vh - 5vh);
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 50% 50%;
+}
+
+main >div >section{
+    width: 85%;
+    height: calc(75vh - 42vh);
+    border: solid black;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* pie de pagina */
+footer{
+    height: 5vh;
+}
+footer >a >img{
+    height: 5vh
+};
+
+}
